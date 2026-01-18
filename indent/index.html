@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Indent Fixer</title>
+  <style>
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<textarea id="editor" placeholder="Input here"></textarea>
+
+<script>
+  const editor = document.getElementById("editor");
+
+  editor.addEventListener("input", () => {
+    const lines = editor.value.split("\n");
+    const fixedLines = lines.map(line => {
+      line = line.replace(/\t/g, "    ");
+      const match = line.match(/^ +/);
+      if (!match) return line;
+      const spaceCount = match[0].length;
+      const fixedCount = Math.round(spaceCount / 4) * 4;
+
+      return " ".repeat(fixedCount) + line.trimStart();
+    });
+    const cursor = editor.selectionStart;
+    editor.value = fixedLines.join("\n");
+    editor.selectionStart = editor.selectionEnd = cursor;
+  });
+</script>
+
+</body>
+</html>
