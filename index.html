@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1EZ5RPGFP7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1EZ5RPGFP7');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watchdog.gay - homepage</title>
+
+    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background:#000;
+            color:#fff;
+            font-family: 'Perfect DOS VGA 437', monospace;
+            font-size:1.2rem;
+            line-height:1.5;
+            font-weight: 500;             
+            padding:1.5rem;
+            min-height:100vh;
+            display:flex;
+            justify-content:flex-start;
+            align-items:flex-start;
+        }
+        .wrapper { width:100%; }
+
+        .section { margin-bottom:1.4rem; }
+        .section-title {
+            color:#fff;              
+            font-size:1.2rem;
+            margin-bottom:0.35rem;
+        }
+
+        .step { cursor:pointer; transition: background 0.2s, box-shadow 0.2s; }
+        .step:hover { background: rgba(0, 102, 255, 0.15); box-shadow: 0 0 10px rgba(0, 102, 255, 0.3); padding-left: 0.5rem; }
+        desc { color: #fff; font-weight: 500 }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="section">
+        <div class="step" data-href="https://unsnipeable.github.io/java_utils/mcp" style="margin:0.8rem 0 0.4rem 0; border-top:1px solid #333; padding-top:0.5rem;">
+            <div style="font-weight:bold;">Searge replacer</div>
+            <div>bit broken</div>
+        </div>
+        <div class="step" data-href="https://unsnipeable.github.io/java_utils/indent" style="margin:0.8rem 0 0.4rem 0; border-top:1px solid #333; padding-top:0.5rem;">
+            <div style="font-weight:bold;">▸ Indent fixer</div>
+            <div>Fix space</div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    document.querySelectorAll('.step').forEach(step => {
+        step.addEventListener('click', function() {
+            const href = this.getAttribute('data-href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
